@@ -1,0 +1,10 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@theme inline { --color-background:var(--background);--color-foreground:var(--foreground);--color-card:var(--card);--color-primary:var(--primary);--color-primary-foreground:var(--primary-foreground);--color-secondary:var(--secondary);--color-muted-foreground:var(--muted-foreground);--color-accent:var(--accent);--color-accent-foreground:var(--accent-foreground);--color-accent-soft:var(--accent-soft);--color-ink:var(--ink);--color-border:var(--border);--color-border-strong:var(--border-strong);--color-input:var(--input);--font-sans:"Geist","Inter",ui-sans-serif,system-ui,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,monospace;--shadow-card:0 1px 2px rgb(0 0 0/.04),0 8px 24px -12px rgb(0 0 0/.12);--shadow-lift:0 2px 4px rgb(0 0 0/.05),0 18px 40px -18px rgb(0 0 0/.22)}
+:root{--background:oklch(.988 .002 95);--foreground:oklch(.19 .008 265);--ink:oklch(.14 .008 265);--card:oklch(1 0 0);--primary:oklch(.19 .008 265);--primary-foreground:oklch(.99 0 0);--secondary:oklch(.965 .003 95);--muted-foreground:oklch(.55 .008 265);--accent:oklch(.63 .2 33);--accent-foreground:oklch(.99 0 0);--accent-soft:oklch(.96 .03 40);--border:oklch(.915 .004 95);--border-strong:oklch(.84 .005 95);--input:oklch(.9 .004 95)}
+@layer base{*{border-color:var(--color-border)}html{scroll-behavior:smooth}body{background:var(--color-background);color:var(--color-foreground);font-family:var(--font-sans);overflow-x:hidden}h1,h2,h3{letter-spacing:-.03em;text-wrap:balance}}
+@utility label-mono{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-foreground)}
+@utility grid-lines{background-image:linear-gradient(to right,var(--border) 1px,transparent 1px),linear-gradient(to bottom,var(--border) 1px,transparent 1px);background-size:64px 64px}
+@utility reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}@utility reveal-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important}}
